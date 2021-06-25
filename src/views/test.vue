@@ -22,7 +22,7 @@ export default {
     getTodos () {
       var num = Math.floor(Math.random() * 90000000) + 10000000
       localStorage.oauthKey = num
-      axios.get('http://localhost:8080/api/oauth2/info/' + num, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/oauth2/info/' + num, {
       })
         .then(res => {
           console.log(res)
@@ -33,7 +33,7 @@ export default {
         email: '2691642766@qq.com',
         password: 'qq123456'
       }
-      axios.post('http://localhost:8080/api/entry/login', message)
+      axios.post('https://my-forum-hl.herokuapp.com/api/entry/login', message)
         .then(res => {
           console.log(res)
         })

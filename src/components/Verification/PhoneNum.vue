@@ -61,7 +61,7 @@ export default {
       const _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/phonelogin',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/phonelogin',
         data: message
       }).then(res => {
         _that.verifyPhone = res.data.message

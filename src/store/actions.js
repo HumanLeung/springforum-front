@@ -22,12 +22,12 @@ export default {
     commit('loadUser', payload)
   },
   getUsers: ({ commit }) => {
-    axios.get('http://localhost:8080/api/entry/freelogin', {
+    axios.get('https://my-forum-hl.herokuapp.com/api/entry/freelogin', {
       headers: {
         Authorization: localStorage.token
       }
     }).then(res => {
-      axios.get('http://localhost:8080/api/user/load/' + res.headers.check, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/user/load/' + res.headers.check, {
         headers: {
           Authorization: localStorage.token
         }
@@ -42,12 +42,12 @@ export default {
     })
   },
   phoneUser: ({ commit }) => {
-    axios.get('http://localhost:8080/api/entry/freelogin', {
+    axios.get('https://my-forum-hl.herokuapp.com/api/entry/freelogin', {
       headers: {
         Authorization: localStorage.phoneJwt
       }
     }).then(res => {
-      axios.get('http://localhost:8080/api/user/load/' + res.headers.check, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/user/load/' + res.headers.check, {
         headers: {
           Authorization: localStorage.phoneJwt
         }
@@ -76,7 +76,7 @@ export default {
         Authorization: localStorage.token
       }
     }
-    axios.get('http://localhost:8080/api/article/getArticles/' + payload, {
+    axios.get('https://my-forum-hl.herokuapp.com/api/article/getArticles/' + payload, {
       headers: headerInfo
     })
       .then(res => {
@@ -108,7 +108,7 @@ export default {
         Authorization: localStorage.token
       }
     }
-    axios.get(`http://localhost:8080/api/article/search/${payload}`, {
+    axios.get(`https://my-forum-hl.herokuapp.com/api/article/search/${payload}`, {
       headers: headerInfo
     }).then(res => {
       console.log(res.data)
@@ -117,7 +117,7 @@ export default {
   },
   loadOauth: ({ commit }) => {
     var key = localStorage.oauthKey
-    axios.get(`http://localhost:8080/api/oauth2/getInfo/${key}`)
+    axios.get(`https://my-forum-hl.herokuapp.com/api/oauth2/getInfo/${key}`)
       .then(res => {
         localStorage.oauthID = res.data.userNum
         localStorage.userNum = res.data.userNum
@@ -131,7 +131,7 @@ export default {
     var userNum = localStorage.oauthID
     var oauthToken = 'oauth2 ' + userNum
     console.log(oauthToken)
-    axios.get(`http://localhost:8080/api/oauth2/getUser/${userNum}`, {
+    axios.get(`https://my-forum-hl.herokuapp.com/api/oauth2/getUser/${userNum}`, {
       headers: {
         Oauth2: oauthToken,
         Authorization: 'null'

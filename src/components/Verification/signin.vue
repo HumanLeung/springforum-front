@@ -39,7 +39,7 @@
       <div class="third-party">
         <i class="fab fa-weixin"></i>
         <a @click="oauthLogin()" href="https://my-forum-hl.herokuapp.com/oauth2/authorization/github"><i class="fab fa-github"></i></a>
-        <a @click="oauthLogin()" href="http://localhost:8080/oauth2/authorization/google"><i class="fab fa-google"></i></a>
+        <a @click="oauthLogin()" href="https://my-forum-hl.herokuapp.com/oauth2/authorization/google"><i class="fab fa-google"></i></a>
         <i @click="loginPhone()" class="fas fa-mobile-alt"></i>
       </div>
         <div class="fps-2">
@@ -88,7 +88,7 @@ export default {
       console.log(message)
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/login',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/login',
         data: message
       }).then(res => {
         console.log(res)
@@ -121,7 +121,7 @@ export default {
       var _that = this
       axios({
         method: 'get',
-        url: 'http://localhost:8080/api/user/load/' + email,
+        url: 'https://my-forum-hl.herokuapp.com/api/user/load/' + email,
         headers: headerInfo
       }).then(res => {
         console.log(res.data.user.userNum)
@@ -142,7 +142,7 @@ export default {
       var _that = this
       axios({
         method: 'get',
-        url: 'http://localhost:8080/api/entry/freelogin',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/freelogin',
         headers: {
           Authorization: localStorage.token
         }

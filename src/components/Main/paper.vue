@@ -104,7 +104,7 @@ export default {
           Authorization: localStorage.token
         }
       }
-      axios.post('http://localhost:8080/api/comment/add/' + this.paper.articleId, message,
+      axios.post('https://my-forum-hl.herokuapp.com/api/comment/add/' + this.paper.articleId, message,
         {
           headers: headerInfo
         })
@@ -115,7 +115,7 @@ export default {
     },
     sub () {
       var _that = this
-      axios.post('http://localhost:8080/api/article/mark/' +
+      axios.post('https://my-forum-hl.herokuapp.com/api/article/mark/' +
        this.$route.params.aid + '/' + localStorage.uid,
       {
         headers: {
@@ -134,7 +134,7 @@ export default {
     forwardChat (room) {
       var _that = this
       var userNum = this.$store.state.user.userNum
-      axios.post('http://localhost:8080/api/article/room/' + room.roomId + '/' + userNum,
+      axios.post('https://my-forum-hl.herokuapp.com/api/article/room/' + room.roomId + '/' + userNum,
         {
           headers: {
             Authorization: localStorage.token
@@ -159,7 +159,7 @@ export default {
       }
       var _that = this
       console.log(this.$route.params.aid)
-      axios.get('http://localhost:8080/api/article/getArticles/paper/' + this.$route.params.aid, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/article/getArticles/paper/' + this.$route.params.aid, {
         headers: headerInfo
       })
         .then(res => {
@@ -180,7 +180,7 @@ export default {
         }
       }
       var _that = this
-      axios.get(`http://localhost:8080/api/article/checkMark/${this.$route.params.aid}/${localStorage.uid}`,
+      axios.get(`https://my-forum-hl.herokuapp.com/api/article/checkMark/${this.$route.params.aid}/${localStorage.uid}`,
         {
           headers: headerInfo
         })

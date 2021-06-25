@@ -66,11 +66,11 @@ export default {
       //   code: 'asdd',
       //   key: 'asde'
       // }
-      console.log('http://localhost:8080/receiver')
+      console.log('https://my-forum-hl.herokuapp.com/receiver')
       var _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/verify',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/verify',
         data: message
       }).then(res => {
         console.log(res.data)

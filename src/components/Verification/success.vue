@@ -31,7 +31,7 @@ export default {
       var _that = this
       axios({
         method: 'get',
-        url: 'http://localhost:8080/api/user/load/' + email,
+        url: 'https://my-forum-hl.herokuapp.com/api/user/load/' + email,
         header: {
           Authorization: localStorage.token
         }
@@ -61,7 +61,7 @@ export default {
       var _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/login',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/login',
         data: message
       }).then(res => {
         if (res.status === 200) {

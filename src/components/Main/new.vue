@@ -99,7 +99,7 @@ export default {
         tags: dataBag
       }
       var _that = this
-      axios.post('http://localhost:8080/api/article/new?num=' + localStorage.userNum, message, {
+      axios.post('https://my-forum-hl.herokuapp.com/api/article/new?num=' + localStorage.userNum, message, {
         headers: {
           Authorization: localStorage.token
         }
@@ -129,7 +129,7 @@ export default {
       var _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/article/upload?id=' + id,
+        url: 'https://my-forum-hl.herokuapp.com/api/article/upload?id=' + id,
         data: formData,
         headers: {
           'Content-Type': 'multipart/form-data',

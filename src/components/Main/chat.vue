@@ -50,7 +50,7 @@ export default {
     connect () {
       console.log(this.receives)
       console.log(this.contents)
-      const socket = new SockJS('http://localhost:8080/webchat')
+      const socket = new SockJS('https://my-forum-hl.herokuapp.com/webchat')
       this.stompClient = Stomp.over(socket)
       this.stompClient.connect({}, this.onConnection)
     },

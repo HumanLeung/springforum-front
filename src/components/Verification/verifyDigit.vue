@@ -65,7 +65,7 @@ export default {
       }
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/verifynum',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/verifynum',
         data: message
       }).then(res => {
         localStorage.phoneJwt = res.data.jwt

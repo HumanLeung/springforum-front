@@ -57,7 +57,7 @@ export default {
           Authorization: localStorage.token
         }
       }
-      axios.get('http://localhost:8080/api/article/getArticles/' + this.count, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/article/getArticles/' + this.count, {
         headers: headerInfo
       }).then(res => {
         console.log(res.data)
@@ -90,7 +90,7 @@ export default {
         }
       }
       var _that = this
-      axios.put(`http://localhost:8080/api/article/updateCount/${aid}`,
+      axios.put(`https://my-forum-hl.herokuapp.com/api/article/updateCount/${aid}`,
         {
           headers: headerInfo
         })

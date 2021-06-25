@@ -91,7 +91,7 @@ export default {
       const _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/entry/register',
+        url: 'https://my-forum-hl.herokuapp.com/api/entry/register',
         data: message
       })
         .then((res) => {

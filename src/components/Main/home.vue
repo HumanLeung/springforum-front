@@ -43,7 +43,7 @@ export default {
     next(vm => {
       vm.$store.dispatch('getUsers')
       vm.userNum = localStorage.userNum
-      axios.get('http://localhost:8080/api/article/marks/' + vm.userNum,
+      axios.get('https://my-forum-hl.herokuapp.com/api/article/marks/' + vm.userNum,
         {
           headers: headerInfo
         })

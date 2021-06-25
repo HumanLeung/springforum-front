@@ -80,7 +80,7 @@ export default {
       var _that = this
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/user/upload?num=' + this.$store.state.user.userNum,
+        url: 'https://my-forum-hl.herokuapp.com/api/user/upload?num=' + this.$store.state.user.userNum,
         data: formData,
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -96,7 +96,7 @@ export default {
         phoneNum: this.form.phone
       }
       var _that = this
-      axios.put('http://localhost:8080/api/user/update/' + this.$store.state.user.userNum, message, {
+      axios.put('https://my-forum-hl.herokuapp.com/api/user/update/' + this.$store.state.user.userNum, message, {
         headers: {
           Authorization: localStorage.token
         }

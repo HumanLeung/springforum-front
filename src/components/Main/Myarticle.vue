@@ -43,7 +43,7 @@ export default {
     cut (aid, index) {
       console.log(aid)
       if (confirm('are you sure ?')) {
-        axios.delete('http://localhost:8080/api/article/delete/' + aid,
+        axios.delete('https://my-forum-hl.herokuapp.com/api/article/delete/' + aid,
           {
             headers: {
               Authorization: localStorage.token
