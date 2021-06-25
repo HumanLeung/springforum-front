@@ -38,7 +38,7 @@
       </div>
       <div class="third-party">
         <i class="fab fa-weixin"></i>
-        <a @click="oauthLogin()" href="http://localhost:8080/oauth2/authorization/github"><i class="fab fa-github"></i></a>
+        <a @click="oauthLogin()" href="https://my-forum-hl.herokuapp.com/oauth2/authorization/github"><i class="fab fa-github"></i></a>
         <a @click="oauthLogin()" href="http://localhost:8080/oauth2/authorization/google"><i class="fab fa-google"></i></a>
         <i @click="loginPhone()" class="fas fa-mobile-alt"></i>
       </div>
@@ -73,7 +73,7 @@ export default {
     oauthLogin () {
       var num = Math.floor(Math.random() * 90000000) + 10000000
       localStorage.oauthKey = num
-      axios.get('http://localhost:8080/api/oauth2/info/' + num, {
+      axios.get('https://my-forum-hl.herokuapp.com/api/oauth2/info/' + num, {
       })
         .then(res => {
           console.log(res)
