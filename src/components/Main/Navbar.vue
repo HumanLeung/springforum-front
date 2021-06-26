@@ -84,7 +84,7 @@ nav i{
   background-color: black;
   position: relative;
   z-index: 20;
-  opacity: 75%;
+  opacity: .8;
 }
 .search-panel input
 {
