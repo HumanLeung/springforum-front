@@ -77,14 +77,14 @@ nav i{
 .link a{
   color: white;
 }
-.search-panel
+.NavContainer .search-panel
 {
   width: 100vw;
   height: 100vh;
-  opacity: 80%;
   background-color: black;
   position: relative;
   z-index: 20;
+  opacity: 75%;
 }
 .search-panel input
 {
