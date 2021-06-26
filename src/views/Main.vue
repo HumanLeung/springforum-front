@@ -22,9 +22,18 @@ export default {
     Footer
   },
   mounted () {
-    if (localStorage.getItem('token') === null && localStorage.oauthID === null) {
-      console.log(localStorage.token)
-      this.$router.push({ name: 'signin' })
+    if (localStorage.getItem('token') === null) {
+      if (localStorage.oauthID === null) {
+        console.log(localStorage.token)
+        this.$router.push({ name: 'signin' })
+        return
+      }
+    }
+    if (localStorage.localStorage.oauthID === null) {
+      if (localStorage.getItem('token') === null) {
+        console.log(localStorage.token)
+        this.$router.push({ name: 'signin' })
+      }
     }
   }
 }
