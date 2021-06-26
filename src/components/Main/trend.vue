@@ -150,6 +150,8 @@ p{
   padding: .2rem;
   height: 2.5rem;
   font-size: 1rem;
+  background: none;
+
 }
 .trend-container .card-deck .card
 {

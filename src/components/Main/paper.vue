@@ -237,7 +237,7 @@ export default {
 {
   padding-top: .1rem;
   padding-bottom: .2rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   border: none;
   width: 100%;
   padding-bottom: .7rem;

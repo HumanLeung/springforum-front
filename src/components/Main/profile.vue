@@ -197,7 +197,7 @@ export default {
 .card-header
 {
   justify-content: space-around;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 0;
   padding-bottom: .3rem;
 }
