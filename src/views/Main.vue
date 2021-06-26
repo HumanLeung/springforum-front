@@ -29,7 +29,7 @@ export default {
         return
       }
     }
-    if (localStorage.localStorage.oauthID === null) {
+    if (localStorage.oauthID === null) {
       if (localStorage.getItem('token') === null) {
         console.log(localStorage.token)
         this.$router.push({ name: 'signin' })
