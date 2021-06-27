@@ -25,6 +25,7 @@ export default {
   },
   beforeRouteEnter (to, from, next) {
     next(vm => {
+      localStorage.oauthUserkey = localStorage.oauthKey
       vm.loadOauth()
     })
   },

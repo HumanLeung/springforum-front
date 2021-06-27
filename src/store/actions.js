@@ -116,7 +116,7 @@ export default {
     })
   },
   loadOauth: ({ commit }) => {
-    var key = localStorage.oauthKey
+    var key = localStorage.oauthUserkey
     axios.get(`https://my-forum-hl.herokuapp.com/api/oauth2/getInfo/${key}`)
       .then(res => {
         localStorage.oauthID = res.data.userNum
