@@ -161,7 +161,7 @@ export default {
     if (localStorage.token != null) {
       this.requestEmail()
     }
-    if (localStorage.oauthKey != null) {
+    if (localStorage.oauthUserkey != null) {
       this.getUserByNum()
       this.$router.push({ name: 'home' })
     }
