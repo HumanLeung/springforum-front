@@ -22,16 +22,14 @@ export default {
     Footer
   },
   mounted () {
+    console.log('main is mounted')
+    console.log(localStorage.getItem('token'))
     if (localStorage.getItem('token') === null) {
-      if (localStorage.oauthID === null) {
-        console.log(localStorage.token)
+      if (localStorage.getItem('oauthID') === null) {
         this.$router.push({ name: 'signin' })
-        return
       }
-    }
-    if (localStorage.oauthID === null) {
+    } else if (localStorage.getItem('oauthID') === null) {
       if (localStorage.getItem('token') === null) {
-        console.log(localStorage.token)
         this.$router.push({ name: 'signin' })
       }
     }
